@@ -50,16 +50,16 @@ function Person(name,age) {
 // && someFood<10
 
 Person.prototype.eat=function(someFood){
-  if (this.stomach<[10])
+  if (this.stomach.length<10)
   { 
-this.stomach.length++;
+this.stomach.push(someFood)
 
 
 }
     
-    if(someFood.edible){
+    // if(someFood.edible){
        
-    }
+    // }
    }
   
 
@@ -99,7 +99,7 @@ function Car(model,milesPerGallon) {
 }
 
 Car.prototype.fill=function(gallons){
-while (this.tank >0 ) true; {this.tank +1;} 
+this.tank+=gallons 
 }
 
 /*
@@ -110,13 +110,16 @@ while (this.tank >0 ) true; {this.tank +1;}
         + Should return a string "Playing with x", x being the favorite toy.
 */
 function Baby(name,age,favoriteToy) {
+  Person.call()
   this.name=name;
   this.age=age;
   this.favoriteToy=favoriteToy;
 }
-Baby.prototype.play(){
-  this.play=true;
+Baby.prototype.play=function(){
+  return `Return with ${this.favoriteToy}`
 }
+
+
 
 /* 
   TASK 4
